@@ -1,3 +1,7 @@
+import { Buscador } from "./components/Buscador";
+import { Crear } from "./components/Crear";
+import { Listado } from "./components/Listado";
+
 function App() {
   return (
     <div className="layout">
@@ -22,58 +26,16 @@ function App() {
 
       {/*Contenido principal*/}
       <section className="content">
-        {/*Aquí van las películas*/}
-        <article className="peli-item">
-          <h3 className="title">Desarrollo web</h3>
-          <p className="description">Hola esta es mi primer pelicula</p>
-
-          <button className="edit">Editar</button>
-          <button className="delete">Borrar</button>
-        </article>
-
-        <article className="peli-item">
-          <h3 className="title">Desarrollo web</h3>
-          <p className="description">Hola esta es mi primer pelicula</p>
-
-          <button className="edit">Editar</button>
-          <button className="delete">Borrar</button>
-        </article>
-
-        <article className="peli-item">
-          <h3 className="title">Desarrollo web</h3>
-          <p className="description">Hola esta es mi primer pelicula</p>
-
-          <button className="edit">Editar</button>
-          <button className="delete">Borrar</button>
-        </article>
-
-        <article className="peli-item">
-          <h3 className="title">Desarrollo web</h3>
-          <p className="description">Hola esta es mi primer pelicula</p>
-
-          <button className="edit">Editar</button>
-          <button className="delete">Borrar</button>
-        </article>
+        {/*Aquí va el listado de películas*/}
+        <Listado />
+        
       </section>
 
       {/*Barra lateral*/}
       <aside className="lateral">
-        <div className="search">
-          <h3 className="title">Buscador</h3>
-          <form action="">
-            <input type="text" />
-            <button>Buscar</button>
-          </form>
-        </div>
+        <Buscador />
 
-        <div className="add">
-          <h3 className="title">Añadir pelicula</h3>
-          <form action="">
-            <input type="text" placeholder="Titulo" />
-            <textarea placeholder="Descripción"></textarea>
-            <input type="submit" value="Guardar" />
-          </form>
-        </div>
+        <Crear />
       </aside>
 
       {/*Pie de página*/}
