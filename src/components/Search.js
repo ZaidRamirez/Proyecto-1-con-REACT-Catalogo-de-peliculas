@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Buscador = () => {
+export const Search = () => {
   return (
     <div className="search">
           <h3 className="title">Buscador</h3>

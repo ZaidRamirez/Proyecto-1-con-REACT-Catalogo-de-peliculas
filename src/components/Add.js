@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { SaveOnStorage } from '../helpers/SaveOnStorage';
 
-export const Crear = () => {
+export const Add = ({setListState}) => {
 
     const titleComponent = "Añadir pelicula";
     const [movieState, setMovieState] = useState({
@@ -23,9 +24,17 @@ export const Crear = () => {
             desc
         };
 
+        /*Guardar estado */
         setMovieState(movie);
 
-        console.log(movieState);
+        //Actualizar el estado de la lista
+        setListState((items)=>{
+            return[...items, movie]
+        });
+
+        /*Guardar en el localStorage */
+        SaveOnStorage("movies", movie);
+
     }
 
   return (
