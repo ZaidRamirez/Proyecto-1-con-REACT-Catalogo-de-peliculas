@@ -203,6 +203,10 @@ textarea{
   padding-left: 25px;
 }
 
+.notFound{
+  color: #9b0202;
+}
+
 @media (max-widht: 1085px){
   .content{
       flex-direction: column;

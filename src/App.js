@@ -40,7 +40,10 @@ function App() {
 
       {/*Barra lateral*/}
       <aside className="lateral">
-        <Search />
+        <Search 
+          listState={listState}
+          setListState={setListState}
+        />
 
         <Add 
           setListState={setListState}

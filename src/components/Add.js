@@ -28,8 +28,8 @@ export const Add = ({setListState}) => {
         setMovieState(movie);
 
         //Actualizar el estado de la lista
-        setListState((items)=>{
-            return[...items, movie]
+        setListState(items=>{
+            return[...items, movie];
         });
 
         /*Guardar en el localStorage */

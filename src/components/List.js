@@ -40,7 +40,7 @@ export const List = ({listState, setListState}) => {
         return (
           <article key={movie.id} className="peli-item">
             <h3 className="title">{movie.title}</h3>
-            <p className="description">{movie.desc}</p>
+            <p className="desc">{movie.desc}</p>
 
             <button className="edit" onClick={() => setEdit(movie.id)}>Editar</button>
             <button className="delete" onClick={ () => deleteMovie(movie.id)}>Borrar</button>
@@ -48,6 +48,9 @@ export const List = ({listState, setListState}) => {
             {edit === movie.id &&(
               <Edit
                 movie= {movie}
+                getMovies = {getMovies}
+                setEdit={setEdit}
+                setListState={setListState}
               />
             )}
 
